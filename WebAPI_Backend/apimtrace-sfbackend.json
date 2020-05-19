@@ -1,0 +1,2394 @@
+{
+    "traceId": "725f8931-ce72-4bee-9901-ed7534bd22a1",
+    "traceEntries": {
+        "inbound": [
+            {
+                "source": "api-inspector",
+                "timestamp": "2020-05-19T07:29:54.2166676Z",
+                "elapsed": "00:00:00.0002907",
+                "data": {
+                    "request": {
+                        "method": "GET",
+                        "url": "https://apimservicefabric.azure-api.net/fabric/api/values",
+                        "headers": [
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Connection",
+                                "value": "Keep-Alive"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Host",
+                                "value": "apimservicefabric.azure-api.net"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "api-inspector",
+                "timestamp": "2020-05-19T07:29:54.2166676Z",
+                "elapsed": "00:00:00.0002934",
+                "data": {
+                    "configuration": {
+                        "api": {
+                            "from": "/fabric",
+                            "to": null,
+                            "version": null,
+                            "revision": "1"
+                        },
+                        "operation": {
+                            "method": "GET",
+                            "uriTemplate": "/api/values"
+                        },
+                        "user": "-",
+                        "product": "-"
+                    }
+                }
+            },
+            {
+                "source": "cors",
+                "timestamp": "2020-05-19T07:29:54.2166676Z",
+                "elapsed": "00:00:00.0003147",
+                "data": "Origin header was missing or empty and the request was classified as not cross-domain. CORS policy was not applied."
+            },
+            {
+                "source": "set-backend-service",
+                "timestamp": "2020-05-19T07:29:54.2166676Z",
+                "elapsed": "00:00:00.0003221",
+                "data": "Backend 'sfbackend' set to current."
+            }
+        ],
+        "backend": [
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.2166676Z",
+                "elapsed": "00:00:00.0003459",
+                "data": {
+                    "message": "Resolving partition",
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ],
+                    "serviceName": {},
+                    "partitionKey": {
+                        "kind": "Singleton"
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.2479083Z",
+                "elapsed": "00:00:00.0349867",
+                "data": {
+                    "message": "Partition successfully resolved",
+                    "serviceName": {},
+                    "partitionId": {},
+                    "partitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D",
+                    "endpointsCount": 3
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.2479083Z",
+                "elapsed": "00:00:00.0349993",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.4:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.4:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.4:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.4:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.2479083Z",
+                "elapsed": "00:00:00.0350877",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.4:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.4:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.9354379Z",
+                "elapsed": "00:00:00.7168536",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.9354379Z",
+                "elapsed": "00:00:00.7168663",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.9354379Z",
+                "elapsed": "00:00:00.7168674",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 1
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.9354379Z",
+                "elapsed": "00:00:00.7168749",
+                "data": {
+                    "message": "Running re-resolve while trying next instance",
+                    "serviceName": {},
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ]
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.9354379Z",
+                "elapsed": "00:00:00.7168773",
+                "data": {
+                    "message": "Re-resolving previously resolved partition",
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ],
+                    "serviceName": {},
+                    "partitionKey": {
+                        "kind": "Singleton"
+                    },
+                    "previousPartitionId": {},
+                    "previousPartitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.9354379Z",
+                "elapsed": "00:00:00.7171844",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.6:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.6:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.6:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.6:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:54.9354379Z",
+                "elapsed": "00:00:00.7172646",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.6:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.6:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:55.1697987Z",
+                "elapsed": "00:00:00.9603283",
+                "data": {
+                    "message": "Partition successfully resolved",
+                    "serviceName": {},
+                    "partitionId": {},
+                    "partitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D",
+                    "endpointsCount": 3
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:55.7039518Z",
+                "elapsed": "00:00:01.4838362",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:55.7039518Z",
+                "elapsed": "00:00:01.4838481",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:55.7039518Z",
+                "elapsed": "00:00:01.4838494",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 2
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:55.7039518Z",
+                "elapsed": "00:00:01.4838641",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.5:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.5:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.5:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.5:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:55.7039518Z",
+                "elapsed": "00:00:01.4839552",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.5:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.5:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5201067Z",
+                "elapsed": "00:00:02.3105060",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5201067Z",
+                "elapsed": "00:00:02.3105134",
+                "data": {
+                    "message": "Leaving retry section. Number of retries exceeded configured value"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5201067Z",
+                "elapsed": "00:00:02.3105189",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5201067Z",
+                "elapsed": "00:00:02.3105250",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5201067Z",
+                "elapsed": "00:00:02.3105259",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 1
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5201067Z",
+                "elapsed": "00:00:02.3105485",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.6:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.6:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.6:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.6:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5201067Z",
+                "elapsed": "00:00:02.3106326",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.6:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.6:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5357294Z",
+                "elapsed": "00:00:02.3140786",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5357294Z",
+                "elapsed": "00:00:02.3140845",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5357294Z",
+                "elapsed": "00:00:02.3140854",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 1
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5357294Z",
+                "elapsed": "00:00:02.3140897",
+                "data": {
+                    "message": "Running re-resolve while trying next instance",
+                    "serviceName": {},
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ]
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5357294Z",
+                "elapsed": "00:00:02.3140913",
+                "data": {
+                    "message": "Re-resolving previously resolved partition",
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ],
+                    "serviceName": {},
+                    "partitionKey": {
+                        "kind": "Singleton"
+                    },
+                    "previousPartitionId": {},
+                    "previousPartitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5357294Z",
+                "elapsed": "00:00:02.3143712",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.5:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.5:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.5:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.5:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5357294Z",
+                "elapsed": "00:00:02.3144201",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.5:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.5:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5357294Z",
+                "elapsed": "00:00:02.3212057",
+                "data": {
+                    "message": "Partition successfully resolved",
+                    "serviceName": {},
+                    "partitionId": {},
+                    "partitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D",
+                    "endpointsCount": 3
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3306504",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3306571",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3306581",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 2
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3306653",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.4:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.4:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.4:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.4:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3307223",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.4:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.4:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3343110",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3343149",
+                "data": {
+                    "message": "Leaving retry section. Number of retries exceeded configured value"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3343186",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3343227",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3343235",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 2
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3343335",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.5:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.5:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.5:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.5:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3343956",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.5:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.5:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3355768",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3355824",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3355834",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 1
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3355871",
+                "data": {
+                    "message": "Running re-resolve while trying next instance",
+                    "serviceName": {},
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ]
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3355887",
+                "data": {
+                    "message": "Re-resolving previously resolved partition",
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ],
+                    "serviceName": {},
+                    "partitionKey": {
+                        "kind": "Singleton"
+                    },
+                    "previousPartitionId": {},
+                    "previousPartitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3358768",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.4:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.4:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.4:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.4:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3359650",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.4:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.4:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3374409",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3374467",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3374476",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 2
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3374545",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.6:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.6:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.6:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.6:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3375772",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.6:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.6:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3389714",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3389744",
+                "data": {
+                    "message": "Leaving retry section. Number of retries exceeded configured value"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3389772",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3389805",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3389812",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 3
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3440080",
+                "data": {
+                    "message": "Partition successfully resolved",
+                    "serviceName": {},
+                    "partitionId": {},
+                    "partitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D",
+                    "endpointsCount": 3
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3440167",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.4:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.4:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.4:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.4:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5513441Z",
+                "elapsed": "00:00:02.3440713",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.4:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.4:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3467942",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3468072",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3468091",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 1
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3468158",
+                "data": {
+                    "message": "Running re-resolve while trying next instance",
+                    "serviceName": {},
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ]
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3468188",
+                "data": {
+                    "message": "Re-resolving previously resolved partition",
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ],
+                    "serviceName": {},
+                    "partitionKey": {
+                        "kind": "Singleton"
+                    },
+                    "previousPartitionId": {},
+                    "previousPartitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3473299",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.6:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.6:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.6:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.6:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3473807",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.6:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.6:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3490328",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3490385",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3490394",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 2
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3490461",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.5:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.5:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.5:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.5:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3490988",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.5:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.5:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3507888",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3507917",
+                "data": {
+                    "message": "Leaving retry section. Number of retries exceeded configured value"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3507952",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3507988",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3507995",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 4
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3539536",
+                "data": {
+                    "message": "Partition successfully resolved",
+                    "serviceName": {},
+                    "partitionId": {},
+                    "partitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D",
+                    "endpointsCount": 3
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3539617",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.6:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.6:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.6:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.6:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3540146",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.6:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.6:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3552660",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3552717",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3552726",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 1
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3552837",
+                "data": {
+                    "message": "Running re-resolve while trying next instance",
+                    "serviceName": {},
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ]
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3552852",
+                "data": {
+                    "message": "Re-resolving previously resolved partition",
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ],
+                    "serviceName": {},
+                    "partitionKey": {
+                        "kind": "Singleton"
+                    },
+                    "previousPartitionId": {},
+                    "previousPartitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3555730",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.5:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.5:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.5:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.5:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3556219",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.5:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.5:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3570765",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3570937",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3570946",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 2
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3571068",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.4:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.4:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.4:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.4:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3571571",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.4:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.4:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3587149",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3587178",
+                "data": {
+                    "message": "Leaving retry section. Number of retries exceeded configured value"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3587231",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3587265",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5670381Z",
+                "elapsed": "00:00:02.3587273",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 5
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3634152",
+                "data": {
+                    "message": "Partition successfully resolved",
+                    "serviceName": {},
+                    "partitionId": {},
+                    "partitionVersion": "%7B%22PartitionId%22:%22489a56ff-895e-47ec-87be-78054f52e2f1%22,%22FMVersion%22:%2235%22,%22StoreVersion%22:%2210%22,%22GenerationNumber%22:%7B%22Generation%22:%22132343400813026921%22,%22NodeId%22:%7B%22Id%22:%22e096bce1a698b0d4e125b65b3807949%22%7D%7D%7D",
+                    "endpointsCount": 3
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3634230",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.5:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.5:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.5:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.5:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3634782",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.5:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.5:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3646384",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3646440",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3646449",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 1
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3646541",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.4:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.4:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.4:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.4:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3647166",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.4:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.4:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3661936",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3662012",
+                "data": {
+                    "message": "Retry condition was met. Retrying in '00:00:00'"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3662022",
+                "data": {
+                    "message": "Retrying...",
+                    "attempt": 2
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3662093",
+                "data": {
+                    "message": "Trying instance",
+                    "url": {
+                        "listeners": {
+                            "httpServiceEndpoint": "http://10.0.0.6:20008",
+                            "httpsServiceEndpoint": "https://10.0.0.6:20007"
+                        },
+                        "address": "{\r\n  \"Endpoints\": {\r\n    \"HttpServiceEndpoint\": \"http://10.0.0.6:20008\",\r\n    \"HTTPSServiceEndpoint\": \"https://10.0.0.6:20007\"\r\n  }\r\n}"
+                    },
+                    "type": "Stateless"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3662653",
+                "data": {
+                    "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://10.0.0.6:20008/api/values",
+                        "headers": [
+                            {
+                                "name": "Host",
+                                "value": "10.0.0.6:20008"
+                            },
+                            {
+                                "name": "Ocp-Apim-Subscription-Key",
+                                "value": "bac01514e5384ad293603350eb876c9c"
+                            },
+                            {
+                                "name": "Sec-Fetch-Site",
+                                "value": "cross-site"
+                            },
+                            {
+                                "name": "Sec-Fetch-Mode",
+                                "value": "cors"
+                            },
+                            {
+                                "name": "Sec-Fetch-Dest",
+                                "value": "empty"
+                            },
+                            {
+                                "name": "X-Forwarded-For",
+                                "value": "49.207.49.145,13.91.254.72"
+                            },
+                            {
+                                "name": "Cache-Control",
+                                "value": "no-cache, no-store"
+                            },
+                            {
+                                "name": "Content-Type",
+                                "value": "text/plain;charset=UTF-8"
+                            },
+                            {
+                                "name": "Accept",
+                                "value": "*/*"
+                            },
+                            {
+                                "name": "Accept-Encoding",
+                                "value": "gzip,deflate,br"
+                            },
+                            {
+                                "name": "Accept-Language",
+                                "value": "en-US,en;q=0.9"
+                            },
+                            {
+                                "name": "Referer",
+                                "value": "https://apimanagement.hosting.portal.azure.net/apimanagement/Content/1.90.0.0/apimap//apimap-apis/index.html?clientOptimizations=undefined&l=en.en-us&trustedAuthority=https%3A%2F%2Fms.portal.azure.com&shellVersion=undefined"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3678621",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3678652",
+                "data": {
+                    "message": "Leaving retry section. Number of retries exceeded configured value"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3678679",
+                "data": {
+                    "message": "Expression was successfully evaluated.",
+                    "expression": "context.Response.StatusCode != 200",
+                    "value": true
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3678686",
+                "data": {
+                    "message": "Leaving retry section. Number of retries exceeded configured value"
+                }
+            },
+            {
+                "source": "service-fabric-backend",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3678723",
+                "data": {
+                    "message": "Exceeded maximum partition resolution attempts.",
+                    "serviceName": {},
+                    "resourceId": "https://servicefabricbackend.eastus.cloudapp.azure.com:19080/",
+                    "managementEndpoint": [
+                        "https://servicefabricbackend.eastus.cloudapp.azure.com:19080"
+                    ]
+                }
+            },
+            {
+                "source": "forward-request",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3678800",
+                "data": {
+                    "response": {
+                        "status": {
+                            "code": 204,
+                            "reason": "No Content"
+                        },
+                        "headers": [
+                            {
+                                "name": "Date",
+                                "value": "Tue, 19 May 2020 07:29:55 GMT"
+                            },
+                            {
+                                "name": "Server",
+                                "value": "Kestrel"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "outbound": [
+            {
+                "source": "transfer-response",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3680996",
+                "data": {
+                    "message": "Response body is not allowed and will be discarded."
+                }
+            },
+            {
+                "source": "transfer-response",
+                "timestamp": "2020-05-19T07:29:56.5825934Z",
+                "elapsed": "00:00:02.3681181",
+                "data": {
+                    "message": "Response headers have been sent to the caller."
+                }
+            }
+        ]
+    }
+}
+
